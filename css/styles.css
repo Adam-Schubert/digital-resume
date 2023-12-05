@@ -1,0 +1,290 @@
+/*
+
+------Color Palette------
+
+Chocolate Cosmos  #4f000b
+Claret            #720026
+Amaranth          #ce4257
+Coral             #ff7f51
+Sandy Brown       #ff9B54
+Amethyst          #9d4edd
+
+-------------------------
+*/
+
+/*----------------------------------------*/
+/*----GLOBAL STYLES-----*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* sets default to 10px using 62.5% method */
+}
+
+*,
+*:before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #4f000b;
+  color: #f5f5ff;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  /* rem is relative to font-size set in the root element */
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  margin: 0;
+  font-weight: 400;
+  margin: 0;
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+/*--------Links---------*/
+
+a {
+  color: #ff7f51;
+}
+
+a:hover {
+  color: #9d4edd;
+  text-decoration: none;
+}
+
+.btn {
+  background: #9d4edd;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 7px;
+  /* em is relative to the current element */
+  letter-spacing: 0.1em;
+  line-height: 1;
+  border-radius: 4px;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 1200px;
+}
+
+/*----------------------------------------*/
+/*---------HOME---------*/
+
+.home {
+  background: url(../images/larger_background_2.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.home .content-wrapper {
+  flex: 1 0 auto;
+}
+
+.content-bg {
+  background: #720026;
+  opacity: 85%;
+  padding: 30px;
+  border: thick groove #9d4edd;
+}
+
+@media screen and (max-width: 800px) {
+  .home {
+    background: url(../images/smaller_background.jpg) no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .home .content-wrapper {
+    padding: 10px;
+  }
+  .content-bg {
+    padding: 20x;
+  }
+}
+
+/*----------------------------------------*/
+/*--------RESUME--------*/
+
+.resume header::before {
+  background: url(../images/resume_page_background.jpg) center / cover;
+  content: "";
+  display: block;
+  height: 400px;
+}
+
+.resume header h1 {
+  border-bottom: 5px solid #9d4edd;
+}
+
+.resume-section {
+  margin-bottom: 50px;
+}
+
+.resume-section h2 {
+  border: 2px solid #ff9b54;
+  text-align: center;
+}
+
+.download-link {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1470px) {
+  .download-link {
+    /* changes positioning of pdf download link based on screen size */
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .resume header::before {
+    height: 200px;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 2.6rem;
+  }
+}
+
+/*--------Profile-------*/
+
+.profile-item {
+  border: 3px solid black;
+  padding: 10px;
+}
+
+/*-------Education------*/
+
+.education-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 3px solid black;
+  padding: 0 10px;
+  margin-top: 15px;
+}
+
+.education-summary li {
+  margin-bottom: 20px;
+}
+
+/*---Work Experience----*/
+
+.work-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 3px solid black;
+  padding: 0 10px;
+  margin-top: 15px;
+}
+
+.work-details p {
+  margin: 0;
+}
+
+.work-summary p:first-child {
+  margin-top: 0;
+}
+
+.work-summary li {
+  margin-bottom: 20px;
+}
+
+/*-------Projects-------*/
+
+.project-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 3px solid black;
+  padding: 0 10px;
+  margin-top: 15px;
+}
+
+.project-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-summary h3 {
+  text-align: center;
+}
+
+.project-summary li {
+  margin-bottom: 20px;
+}
+
+/*----------------------------------------*/
+/*--------FOOTER--------*/
+
+footer {
+  background: #4f000b;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.socials {
+  list-style-type: none;
+  padding: 0;
+}
+
+.socials li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.socials img {
+  width: 32px;
+}
+
+.socials img:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 1000px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  footer {
+    text-align: center;
+    padding: 10px;
+  }
+}
